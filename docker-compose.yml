@@ -1,0 +1,25 @@
+services:
+  devops:
+    build:
+      context: .
+      args:
+        UID: ${HOST_UID-1000}
+        GID: ${HOST_GID-1000}
+        USERNAME: devops
+        FLY_VERSION: ${FLY_VERSION-7.14.0}
+    image: devops-toolbox:latest
+    container_name: devops-toolbox
+    working_dir: /workspace
+    tty: true
+    stdin_open: true
+    volumes:
+      - devops-home:/home/devops
+      - workspace:/workspace
+      # Mount your SSH keys or other secrets as needed, e.g.:
+      # - ~/.ssh:/home/devops/.ssh:ro
+    environment:
+      - TZ=America/New_York
+    command: ["bash"]
+volumes:
+  devops-home:
+  workspace:
