@@ -7,7 +7,7 @@ A batteries-included Docker workspace with frequently used DevOps CLIs preinstal
 - **HashiCorp**: `terraform`, `vault`
 - **Kubernetes**: `kubectl` (latest stable at build time)
 - **Cloud**: `aws` (CLI v2), `gcloud` (Google Cloud CLI), `cf` (Cloud Foundry v8)
-- Utilities: `git`, `vim`, `curl`, `jq`, `nmap`, `tcpdump`, `traceroute`, `netcat`, `ping`, etc.
+- **Utilities**: `git`, `vim`, `curl`, `jq`, `nmap`, `tcpdump`, `traceroute`, `netcat`, `ping`, etc.
 
 Persistent **home** and **workspace** volumes let you stop/start the container without losing kubeconfigs, cloud creds, history, etc.
 
@@ -85,3 +85,5 @@ See the references in the main chat response for links.
 ## License
 
 MIT for the glue code in this repo; each tool remains under its own license.
+
+[Onboarding Checklist](./docs/01_onboarding.md)
